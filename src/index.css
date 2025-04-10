@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.shadow1 {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.shadow2{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.shadow3{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.shadow4{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+/* Vertical animation for larger screens */
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Horizontal animation for smaller screens */
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Default vertical animations */
+.animate-upwards {
+  animation: moveUp 10s linear infinite;
+}
+
+.animate-downwards {
+  animation: moveDown 10s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-upwards {
+    animation: moveRight 10s linear infinite;
+  }
+
+  .animate-downwards {
+    animation: moveLeft 10s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-upwards {
+    animation: none;
+  }
+
+  .animate-downwards {
+    animation: none;
+  }
+}
+
+.parent-div {
+  height: 100%;
+  overflow: hidden;
+}
+
