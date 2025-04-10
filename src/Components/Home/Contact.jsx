@@ -22,8 +22,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const url = "https://techmate-backend-17y1.onrender.com/contact/feedback";
-      const url = "https://techmate-backend.vercel.app/contact/feedback";
+        const url = "https://techmate-backend-17y1.onrender.com/contact/feedback";
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -46,7 +45,7 @@ function Contact() {
   };
 
   useEffect(() => {
-    AOS.init({ 
+    AOS.init({
       duration: 800,
       once: true
     });
@@ -67,13 +66,13 @@ function Contact() {
         <div className="relative flex flex-col lg:flex-row bg-white w-full max-w-6xl rounded-2xl overflow-hidden shadow-xl border border-gray-100">
           {/* Decorative elements */}
           <div className="absolute -top-12 -left-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 -z-10"></div>
-          
+
           {/* Contact Info Section */}
           <div className="flex flex-col justify-center w-full lg:w-1/2 p-8 md:p-12 lg:p-16 bg-gradient-to-br from-blue-50 to-indigo-50">
             <h1 className="text-3xl font-bold text-gray-800 mb-6" data-aos="fade-right">
               Our Contact Details
             </h1>
-            
+
             <div className="space-y-6">
               <div className="flex items-start gap-4" data-aos="fade-right" data-aos-delay="100">
                 <div className="mt-1 text-blue-600">
@@ -167,7 +166,7 @@ function Contact() {
             <div className="card bg-white w-full" data-aos="zoom-in">
               <form className="card-body p-0" onSubmit={handleSubmit}>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a message</h2>
-                
+
                 <div className="form-control mb-4">
                   <label className="label">
                     <span className="label-text text-gray-700">Your Name</span>
@@ -224,8 +223,8 @@ function Contact() {
                 </div>
 
                 <div className="form-control">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-none hover:from-blue-700 hover:to-indigo-700"
                   >
                     Send Message

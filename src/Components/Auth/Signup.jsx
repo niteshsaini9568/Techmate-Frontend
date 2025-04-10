@@ -62,7 +62,7 @@ function Signup() {
     setIsLoading(true);
 
     try {
-      const url = "https://techmate-backend.vercel.app/auth/signup";
+      const url = "https://techmate-backend-17y1.onrender.com/auth/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -71,17 +71,18 @@ function Signup() {
         body: JSON.stringify(signupInfo),
       });
 
+      console.log(response);
       const result = await response.json();
-
       if (!result.success) {
         throw new Error(result.message || "Registration failed");
       }
 
       handleSuccess("Registration Successful");
-      saveCookie("Token", result.token, 7);
+      saveCookie("Techmate-Token", result.token, 7);
       navigate("/");
     } catch (error) {
-      handleError(error.message || "An error occurred during registration");
+      console.log(error);
+      handleError(error.message);
     } finally {
       setIsLoading(false);
     }
@@ -117,7 +118,7 @@ function Signup() {
               <p className="text-blue-100 mb-8 text-lg">
                 Create your account to unlock exclusive features, personalized content, and connect with our community.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="bg-blue-500 p-2 rounded-full mr-4">
@@ -146,7 +147,7 @@ function Signup() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
               Create Your Account
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-1">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">

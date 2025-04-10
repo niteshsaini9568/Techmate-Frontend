@@ -48,7 +48,7 @@ function Login() {
     setIsLoading(true);
 
     try {
-      const url = "https://techmate-backend.vercel.app/auth/login";
+      const url = "https://techmate-backend-17y1.onrender.com/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -64,10 +64,11 @@ function Login() {
       }
 
       handleSuccess("Login Successful");
-      saveCookie("Token", result.token, rememberMe ? 7 : 1);
+      saveCookie("Techmate-Token", result.token, rememberMe ? 7 : 1);
       navigate("/");
     } catch (error) {
-      handleError(error.message || "An error occurred during login");
+      console.log(error);
+      handleError(error.message);
     } finally {
       setIsLoading(false);
     }

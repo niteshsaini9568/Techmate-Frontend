@@ -3,8 +3,10 @@ import { FaCheckCircle, FaCrown, FaStar, FaRupeeSign } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import checkoutHandle from "../../Payment/Payment";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const PricingCards = () => {
+  const navigate = useNavigate();
 
   const handlePayment = async (amount) => {
     await checkoutHandle(amount, navigate);

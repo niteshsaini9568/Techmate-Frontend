@@ -21,14 +21,13 @@ function Navbar() {
 
   let accessCookie = (name)=>{
     let cookie = `${document.cookie}`;
-    console.log(cookie.split("=")[1]);
     return(cookie.split("=")[1]);
   }
   
   const isLoggedIn = accessCookie("Techmate-Token");
 
   const handleLogout = () => {
-    Cookies.remove("Token");
+    Cookies.remove("Techmate-Token");
     window.location.reload(); 
   };
   

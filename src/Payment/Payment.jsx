@@ -8,7 +8,7 @@ const checkoutHandle = async (amount, navigate) => {
     return cookie.split("=")[1];
   };
 
-  const isLoggedIn = accessCookie("Token");
+  const isLoggedIn = accessCookie("Techmate-Token");
 
   if (!isLoggedIn) {
     handleError("You are not LoggedIn");
@@ -19,11 +19,11 @@ const checkoutHandle = async (amount, navigate) => {
   try {
     const {
       data: { key },
-    } = await axios.get("https://techmate-backend.vercel.app/payment/api/getkey");
+    } = await axios.get("https://techmate-backend-17y1.onrender.com/payment/api/getkey");
 
     const {
       data: { order },
-    } = await axios.post("https://techmate-backend.vercel.app/payment/checkout", { amount });
+    } = await axios.post("https://techmate-backend-17y1.onrender.com/payment/checkout", { amount });
 
     const options = {
       key,
@@ -34,7 +34,7 @@ const checkoutHandle = async (amount, navigate) => {
         "A dynamic startup offering expert graphic design, exclusive electronic deals, and tailored tech solutions.",
       image: "https://avatars.githubusercontent.com/u/96648429?s=96&v=4",
       order_id: order.id,
-      callback_url: "https://techmate-backend.vercel.app/payment/paymentverification",
+      callback_url: "https://techmate-backend-17y1.onrender.com/payment/paymentverification",
       prefill: {
         name: "Techmate",
         email: "payment@techmate.com",
