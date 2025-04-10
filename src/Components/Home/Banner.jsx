@@ -73,7 +73,7 @@ function Banner() {
                 className="w-full h-auto max-w-lg mx-auto lg:mx-0"
                 alt="Digital marketing solutions"
               />
-              <div className="absolute -bottom-6 right-6 w-24 h-24 bg-indigo-100 rounded-xl -z-10 hidden lg:block"></div>
+              <div className="absolute -bottom-6 right-20 w-24 h-24 bg-indigo-100 rounded-xl -z-10 hidden lg:block"></div>
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-blue-100 rounded-xl -z-10 hidden lg:block"></div>
             </div>
           </div>
