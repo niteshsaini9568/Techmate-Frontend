@@ -29,7 +29,7 @@ function Banner() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 lg:ml-5">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                 Techmate Today
               </span>
