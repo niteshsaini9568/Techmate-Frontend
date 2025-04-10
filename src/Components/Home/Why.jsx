@@ -19,7 +19,7 @@ function Why() {
   const iconStyles = "text-6xl  lg:text-6xl p-4 rounded-full mb-4";
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-20 px-6 md:px-10 lg:px-20 py-10 lg:mx-20 h-auto lg:h-[80vh] relative bg-gradient-to-r from-white via-blue-100 to-blue-200">
+    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-20 px-6 md:px-10 lg:px-40 py-10  h-auto lg:h-[80vh] relative bg-gradient-to-r from-white via-blue-100 to-blue-200">
       <div
         data-aos="zoom-in"
         className="relative text-center lg:text-left flex-1 lg:pr-10"
