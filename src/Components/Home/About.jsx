@@ -59,7 +59,7 @@ function About() {
   ];
 
   return (
-    <section id="aboutus" className="py-16 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section id="aboutus" className="py-16 lg:py-28 lg:mx-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-10 mix-blend-multiply filter blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full opacity-10 mix-blend-multiply filter blur-3xl"></div>
