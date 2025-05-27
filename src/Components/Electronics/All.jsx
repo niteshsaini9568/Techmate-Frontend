@@ -11,7 +11,7 @@ function All({ selectedItem }) {
   const navigate = useNavigate();
 
   const handlePayment = async (amount) => {
-    let price = parseFloat(amount)
+    let price = parseFloat(amount);
     await checkoutHandle(price, navigate);
   };
 
