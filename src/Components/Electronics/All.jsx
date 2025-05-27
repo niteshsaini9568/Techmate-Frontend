@@ -11,7 +11,8 @@ function All({ selectedItem }) {
   const navigate = useNavigate();
 
   const handlePayment = async (amount) => {
-    await checkoutHandle(amount, navigate);
+    let price = parseFloat(amount)
+    await checkoutHandle(price, navigate);
   };
 
   const hideScrollbarStyle = {
